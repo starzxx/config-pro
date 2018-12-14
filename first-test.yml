@@ -1,19 +1,10 @@
 spring:
+  datasource:
+    url: jdbc:mysql://192.168.1.36:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=true&serverTimezone=GMT%2b8
+    username: root
+    password: liuliu66
   application:
-    name: config
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://gitlab-demo.com/SpringCloud_Sell/config-repo.git
-          username: lly835@163.com
-          password: nKfm9JMUfWEh
-#          basedir: /Users/admin/code/myProjects/java/imooc/SpringCloud_Sell/config/basedir
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
-management:
-  endpoints:
-    web:
-      expose: "*"
+    name: zxx-boot-2
+mybatis:
+  type-aliases-package: com.zxx.boot.entity
+  mapper-locations: mapper/*.xml
