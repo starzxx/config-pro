@@ -3,8 +3,14 @@ spring:
     url: jdbc:mysql://192.168.1.36:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=true&serverTimezone=GMT%2b8
     username: root
     password: liuliu66
+    driver-class-name: com.mysql.jdbc.Driver
   application:
-    name: zxx-boot-2
+    name: order
 mybatis:
-  type-aliases-package: com.zxx.boot.entity
+  type-aliases-package: com.zxx.order.entity
   mapper-locations: mapper/*.xml
+# pagehelper:
+   helperDialect: mysql
+   reasonable: true
+   supportMethodsArguments: true
+   params: count=countSql
