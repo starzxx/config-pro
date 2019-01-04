@@ -17,4 +17,4 @@ logging:
   level:
     org.springframework.cloud.netflix.feign: debug
 env:
-  test2
+  test1
